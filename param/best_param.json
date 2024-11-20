@@ -1,0 +1,523 @@
+{
+  "cora": {
+  "GCN": {
+      "GCN": {
+            "dataset": "cora",
+            "split_idx": 0,
+            "teacher": "GCN",
+            "teacher_layers": 3,
+            "teacher_hidden": 256,
+            "dropout_t": 0.5,
+
+            "student": "GCN",
+            "student_layers": 2,
+            "student_hidden": 64,
+            "dropout_s": 0.6,
+
+            "alpha": 0.5,
+            "beta": 0.007,
+            "K": 1,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "stu"
+      },
+
+      "MLP": {
+            "dataset": "cora",
+            "split_idx": 0,
+            "teacher": "GCN",
+            "teacher_layers": 3,
+            "teacher_hidden": 256,
+            "dropout_t": 0.5,
+
+            "student": "MLP",
+            "student_layers": 2,
+            "student_hidden":64,
+            "dropout_s": 0.7,
+
+            "alpha": 18,
+            "beta": 0.003,
+            "K": 3,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "stu"
+      }
+  }
+},
+
+  "citeseer": {
+     "GCN":{
+      "GCN": {
+            "dataset": "citeseer",
+            "split_idx": 0,
+            "teacher": "GCN",
+            "teacher_layers": 3,
+            "teacher_hidden": 512,
+            "dropout_t": 0.4,
+
+            "student": "GCN",
+            "student_layers": 2,
+            "student_hidden": 64,
+            "dropout_s": 0.3,
+
+            "alpha": 0.5,
+            "beta": 0.002,
+            "K": 2,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "stu"
+      },
+    "MLP": {
+            "dataset": "citeseer",
+            "split_idx": 0,
+            "teacher": "GCN",
+            "teacher_layers": 3,
+            "teacher_hidden": 512,
+            "dropout_t": 0.4,
+
+            "student": "MLP",
+            "student_layers": 2,
+            "student_hidden": 64,
+            "dropout_s": 0.3,
+
+            "alpha": 18,
+            "beta": 0.002,
+            "K": 2,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "stu"
+      }
+  }
+},
+
+"pubmed":{
+  "GCN": {
+       "GCN": {
+             "dataset": "pubmed",
+             "split_idx": 0,
+             "teacher": "GCN",
+             "teacher_layers": 3,
+             "teacher_hidden": 512,
+             "dropout_t": 0.6,
+
+             "student": "GCN",
+             "student_layers": 2,
+             "student_hidden": 64,
+             "dropout_s": 0.7,
+
+            "alpha": 0.8,
+            "beta": 0.004,
+            "K": 6,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "tea"
+       },
+      "MLP": {
+           "dataset": "pubmed",       
+           "split_idx": 0,    
+           "teacher": "GCN",
+           "teacher_layers": 3,
+           "teacher_hidden": 512,
+           "dropout_t": 0.6,
+
+           "student": "MLP",
+           "student_layers": 2,
+           "student_hidden": 64,
+           "dropout_s": 0.7,
+
+            "gradient": "MLP",
+            "grad_layers": 3,
+            "grad_hidden": 64,
+            "dropout_grad": 0.6,
+
+            "alpha": 18,
+            "beta": 0.005,
+            "K": 6,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "tea"
+       }
+   }
+},
+
+ "coauthor-phy":{
+  "GCN": {
+      "GCN": {
+            "dataset": "coauthor-phy",      
+            "split_idx": 0,                  
+            "teacher": "GCN",
+            "teacher_layers": 2,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.4,
+
+            "student": "GCN",
+            "student_layers": 2,
+            "student_hidden": 256,
+            "dropout_s": 0.9,
+
+            "alpha": 0.9,
+            "beta": 0.0009,
+            "K": 1,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "stu"
+      },
+      "MLP": {
+            "dataset": "coauthor-phy",          
+            "split_idx": 0,        
+            "teacher": "GCN",
+            "teacher_layers": 2,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.4,
+
+            "student": "MLP",
+            "student_layers": 2,
+            "student_hidden": 256,
+            "dropout_s": 0.3,
+
+            "alpha": 12,
+            "beta": 0.0,
+            "K": 4,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "stu"
+      }
+    },
+    
+     "GAT": {
+      "GCN": {
+            "dataset": "coauthor-phy",     
+            "split_idx": 0,             
+            "teacher": "GAT",
+            "teacher_layers": 2,
+            "teacher_hidden": 256,
+            "dropout_t": 0.6,
+
+            "student": "GCN",
+            "student_layers": 2,
+            "student_hidden": 64,
+            "dropout_s": 0.6,
+
+            "alpha": 0.2,
+            "beta": 0.0,
+            "K": 4,
+            "learning_rate": 0.01,
+            "weight_decay": 0.005,
+            "max_epoch": 500,
+
+            "seed": 2025,
+            "mode": "stu"
+      },
+      
+      "MLP": {
+            "dataset": "coauthor-phy",        
+            "split_idx": 0,          
+            "teacher": "GAT",
+            "teacher_layers": 2,
+            "teacher_hidden": 256,
+            "dropout_t": 0.6,
+
+            "student": "MLP",
+            "student_layers": 2,
+            "student_hidden": 64,
+            "dropout_s": 0.6,
+
+            "alpha": 0.2,
+            "beta": 0.0,
+            "K": 4,
+            "learning_rate": 0.01,
+            "weight_decay": 0.005,
+            "max_epoch": 500,
+
+            "seed": 2025,
+            "mode": "stu"
+      }
+    },
+    
+     "GraphSAGE": {
+      "GCN": {
+            "dataset": "coauthor-phy",            
+            "split_idx": 0,      
+            "teacher": "GraphSAGE",
+            "teacher_layers": 2,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.3,
+
+            "student": "GCN",
+            "student_layers": 2,
+            "student_hidden": 256,
+            "dropout_s": 0.4,
+
+            "alpha": 0.4,
+            "beta": 0.0005,
+            "K": 5,
+            "learning_rate": 0.01,
+            "weight_decay": 0.001,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "stu"
+      },
+      
+       "MLP": {
+            "dataset": "coauthor-phy",     
+            "split_idx": 0,             
+            "teacher": "GraphSAGE",
+            "teacher_layers": 2,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.3,
+
+            "student": "MLP",
+            "student_layers": 2,
+            "student_hidden": 256,
+            "dropout_s": 0.4,
+
+            "alpha": 0.4,
+            "beta": 0.0005,
+            "K": 5,
+            "learning_rate": 0.01,
+            "weight_decay": 0.001,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "stu"
+      }
+    }
+  },
+
+ "amazon-photo": {
+    "GCN":{
+      "GCN": {
+            "dataset": "amazon-photo",       
+            "split_idx": 0,          
+            "teacher": "GCN",
+            "teacher_layers": 3,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.4,
+
+            "student": "GCN",
+            "student_layers": 2,
+            "student_hidden": 64,
+            "dropout_s": 0.8,
+
+            "alpha": 0.3,
+            "beta": 0.0007,
+            "K": 3,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2000,
+            "mode": "tea"
+      },
+
+      "MLP": {
+            "dataset": "amazon-photo",      
+            "split_idx": 0,            
+            "teacher": "GCN",
+            "teacher_layers": 3,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.5,
+
+            "student": "MLP",
+            "student_layers": 2,
+            "student_hidden": 256,
+            "dropout_s": 0.8,
+
+            "alpha": 15,
+            "beta": 0.0008,
+            "K": 7,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "tea"
+        }
+  },
+
+"GAT":{
+      "GCN": {
+            "dataset": "amazon-photo",       
+            "split_idx": 0,          
+            "teacher": "GAT",
+            "teacher_layers": 3,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.4,
+
+            "student": "GCN",
+            "student_layers": 2,
+            "student_hidden": 256,
+            "dropout_s": 0.8,
+
+             "alpha": 0.3,
+            "beta": 0.0,
+            "K": 4,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2000,
+            "mode": "tea"
+      },
+
+      "MLP": {
+            "dataset": "amazon-photo",     
+            "split_idx": 0,             
+            "teacher": "GAT",
+            "teacher_layers": 3,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.5,
+
+            "student": "MLP",
+            "student_layers": 2,
+            "student_hidden": 256,
+            "dropout_s": 0.8,
+
+            "alpha": 20,
+            "beta": 0.0,
+            "K": 4,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "tea"
+        }
+  },
+
+"GraphSAGE":{
+      "GCN": {
+            "dataset": "amazon-photo",       
+            "split_idx": 0,          
+            "teacher": "GraphSAGE",
+            "teacher_layers": 3,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.4,
+
+            "student": "GCN",
+            "student_layers": 2,
+            "student_hidden": 256,
+            "dropout_s": 0.8,
+
+             "alpha": 0.3,
+            "beta": 0.0,
+            "K": 4,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "stu"
+      },
+
+      "MLP": {
+            "dataset": "amazon-photo",            
+            "split_idx": 0,      
+            "teacher": "GraphSAGE",
+            "teacher_layers": 3,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.5,
+
+            "student": "MLP",
+            "student_layers": 2,
+            "student_hidden": 256,
+            "dropout_s": 0.8,
+
+            "alpha": 20,
+            "beta": 0.0,
+            "K": 4,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0005,
+            "max_epoch": 500,
+
+            "seed": 2024,
+            "mode": "tea"
+        }
+  }
+},
+"ogbn-arxiv": {
+    "GCN":{
+      "MLP": {
+            "dataset": "ogbn-arxiv",
+            "split_idx": 0,      
+            "batch_size": 2048,
+            "teacher": "GCN",
+            "teacher_layers": 3,
+            "teacher_hidden": 1024,
+            "dropout_t": 0.3,
+            
+            "student": "MLP",
+            "student_layers": 3,
+            "student_hidden": 1024,
+            "dropout_s": 0.9,
+
+            "alpha": 0.2,
+            "beta": 0.0006,
+            "K": 1,
+            "learning_rate": 0.005,
+            "weight_decay": 0.0,
+            "max_epoch": 500,
+
+            "seed": 0,
+            "mode": "stu",
+            "norm_type": "batch"
+        }
+    }
+  },
+
+ "ogbn-products": {
+   "GCN": {
+      "MLP": {
+            "dataset": "ogbn-products",
+            "split_idx": 0,      
+            "batch_size": 4096,
+            "teacher": "GCN",
+            "teacher_layers": 3,
+            "teacher_hidden": 256,
+            "dropout_t": 0.5,
+
+            "student": "MLP",
+            "student_layers": 3,
+            "student_hidden": 256,
+            "dropout_s": 0.5,
+
+            "alpha": 20,
+            "beta": 0.0,
+            "K": 4,
+            "tau": 0.0,
+            "learning_rate": 0.003,
+            "weight_decay": 0.0,
+            "max_epoch": 500,
+
+            "seed": 42,
+            "mode": "stu",
+            "norm_type": "batch"
+        }
+      }
+  }
+}
