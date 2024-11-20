@@ -1,4 +1,4 @@
-# Dynamic Gradient Knowledge Distillation Based on Imitation Learning
+# Dynamic Gradient Knowledge Distillation: An Inheritance and Extension Framework for Graph Neural Network Learning Process
 
 This repository provides an overview of the paper **"Dynamic Gradient Knowledge Distillation: An Inheritance and Extension Framework for Graph Neural Network Learning Process"**, authored by Kang Liu, Shunzhi Yang, Chang-Dong Wang, and Zhenhua Huang.
 
